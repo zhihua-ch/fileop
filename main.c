@@ -17,6 +17,7 @@ int main(int argc, char *argv[]) {
 	if(SrcFp==NULL) printf("open file failed.\n");
 	
 	if(fgets(line, 90, SrcFp)){
+		i = 0;
 		do{
 			printf("%c", line[i]);
 		}while(line[i++]);

@@ -1,0 +1,46 @@
+mResumed=false mStopped=false mFinished=false
+mResumed=1ikje ted=false
+04-08 14:30:26.167: E/FragmentManager(30319):     mChangingConfigurations=false
+04-08 14:30:26.168: E/FragmentManager(30319):     mCurrentConfig={1.0 460mcc2mnc zh_CN ldltr sw360dp w360dp h567dp 320dpi nrml port finger -keyb/v/h -nav/h s.7?spn}
+04-08 14:30:26.168: E/FragmentManager(30319):   Active Fragments in 389fb4f2:
+04-08 14:30:26.168: E/FragmentManager(30319):     #0: PlaceholderFragment{dfad454 #0 id=0x7f080000}
+04-08 14:30:26.168: E/FragmentManager(30319):       mFragmentId=#7f080000 mContainerId=#7f080000 mTag=null
+04-08 14:30:26.168: E/FragmentManager(30319):       mState=0 mIndex=0 mWho=android:fragment:0 mBackStackNesting=0
+04-08 14:30:26.168: E/FragmentManager(30319):       mAdded=true mRemoving=false mResumed=false mFromLayout=false mInLayout=false
+04-08 14:30:26.168: E/FragmentManager(30319):       mHidden=false mDetached=false mMenuVisible=true mHasMenu=false
+04-08 14:30:26.168: E/FragmentManager(30319):       mRetainInstance=false mRetaining=false mUserVisibleHint=true
+04-08 14:30:26.168: E/FragmentManager(30319):       mFragmentManager=FragmentManager{389fb4f2 in DisplayMessageActivity{2d762ffd}}
+04-08 14:30:26.168: E/FragmentManager(30319):       mActivity=com.example.first.DisplayMessageActivity@2d762ffd
+04-08 14:30:26.168: E/FragmentManager(30319):   Added Fragments:
+04-08 14:30:26.168: E/FragmentManager(30319):     #0: PlaceholderFragment{dfad454 #0 id=0x7f080000}
+04-08 14:30:26.168: E/FragmentManager(30319):   FragmentManager misc state:
+04-08 14:30:26.168: E/FragmentManager(30319):     mActivity=com.example.first.DisplayMessageActivity@2d762ffd
+04-08 14:30:26.168: E/FragmentManager(30319):   
+04-08 14:30:26.174: E/FragmentManager(30319):   mContainer=android.app.Activity$1@2a4df743
+04-08 14:30:26.174: E/FragmentManager(30319):     mCurState=2 mStateSaved=false mDestroyed=false
+04-08 14:30:26.174: E/FragmentManager(30319):   Looper (main, tid 1) {55ae1c0}
+04-08 14:30:26.174: E/FragmentManager(30319):     (Total messages: 0, idling=false, quitting=false)
+04-08 14:30:26.175: D/AndroidRuntime(30319): Shutting down VM
+04-08 14:30:26.177: E/AndroidRuntime(30319): FATAL EXCEPTION: main
+04-08 14:30:26.177: E/AndroidRuntime(30319): Process: com.example.first, PID: 30319
+04-08 14:30:26.177: E/AndroidRuntime(30319): java.lang.RuntimeException: Unable to start activity ComponentInfo{com.example.first/com.example.first.DisplayMessageActivity}: java.lang.IllegalArgumentException: No view found for id 0x7f080000 (com.example.first:id/container) for fragment PlaceholderFragment{dfad454 #0 id=0x7f080000}
+04-08 14:30:26.177: E/AndroidRuntime(30319): 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2314)
+04-08 14:30:26.177: E/AndroidRuntime(30319): 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2386)
+04-08 14:30:26.177: E/AndroidRuntime(30319): 	at android.app.ActivityThread.access$800(ActivityThread.java:148)
+04-08 14:30:26.177: E/AndroidRuntime(30319): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1292)
+04-08 14:30:26.177: E/AndroidRuntime(30319): 	at android.os.Handler.dispatchMessage(Handler.java:102)
+04-08 14:30:26.177: E/AndroidRuntime(30319): 	at android.os.Looper.loop(Looper.java:135)
+04-08 14:30:26.177: E/AndroidRuntime(30319): 	at android.app.ActivityThread.main(ActivityThread.java:5310)
+04-08 14:30:26.177: E/AndroidRuntime(30319): 	at java.lang.reflect.Method.invoke(Native Method)
+04-08 14:30:26.177: E/AndroidRuntime(30319): 	at java.lang.reflect.Method.invoke(Method.java:372)
+04-08 14:30:26.177: E/AndroidRuntime(30319): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:901)
+04-08 14:30:26.177: E/AndroidRuntime(30319): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:696)
+04-08 14:30:26.177: E/AndroidRuntime(30319): Caused by: java.lang.IllegalArgumentException: No view found for id 0x7f080000 (com.example.first:id/container) for fragment PlaceholderFragment{dfad454 #0 id=0x7f080000}
+04-08 14:30:26.177: E/AndroidRuntime(30319): 	at android.app.FragmentManagerImpl.moveToState(FragmentManager.java:886)
+04-08 14:30:26.177: E/AndroidRuntime(30319): 	at android.app.FragmentManagerImpl.moveToState(FragmentManager.java:1067)
+04-08 14:30:26.177: E/AndroidRuntime(30319): 	at android.app.BackStackRecord.run(BackStackRecord.java:833)
+04-08 14:30:26.177: E/AndroidRuntime(30319): 	at android.app.FragmentManagerImpl.execPendingActions(FragmentManager.java:1454)
+04-08 14:30:26.177: E/AndroidRuntime(30319): 	at android.app.Activity.performStart(Activity.java:5968)
+04-08 14:30:26.177: E/AndroidRuntime(30319): 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2277)
+04-08 14:30:26.177: E/AndroidRuntime(30319): 	... 10 more
+04-08 14:30:27.949: I/Process(30319): Sending signal. PID: 30319 SIG: 9

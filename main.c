@@ -4,17 +4,17 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
-	FILE *SrcFp;
-	FILE *TgtFp;
+	FILE *SrcFp, *TgtFp, *ConFp;
+	
 	char line[100];
-	char TgtWds[100];
+	char ConWds[100];
 	
 	int i, x;
 	long int loc;
 	/*initial character */
 	for(i=0;i<100;i++) {
 		line[i] = NULL;
-		TgtWds[i] = NULL;
+		ConWds[i] = NULL;
 	}
 	
 	//printf("This is DEV C++ application.\n");
@@ -23,8 +23,8 @@ int main(int argc, char *argv[]) {
 	if(SrcFp==NULL) printf("open file failed.\n");
 	else printf("open Src file\n");
 	
-	TgtFp = fopen("tgt.txt", "r");
-	if(TgtFp == NULL) printf("open Target file failed \n");
+	ConFp = fopen("tgt.txt", "r");
+	if(ConFp == NULL) printf("open Content file failed \n");
 	else printf("open content file\n");
 	/*if(fgets(line, 90, SrcFp)){
 		i = 0;
@@ -48,7 +48,7 @@ int main(int argc, char *argv[]) {
 	
 	loc = ftell(SrcFp);
 	
-	if(fgets(TgtWds, 10, TgtFp)){
+	if(fgets(ConWds, 10, ConFp)){
 		/*x = 0;
 		do{
 			printf("%c", TgtWds[x]);}
@@ -61,7 +61,7 @@ int main(int argc, char *argv[]) {
 			printf("i is %d\n", i);
 		}*/
 		i++;
-		strncpy(&line[i], TgtWds, 4);
+		strncpy(&line[i], ConWds, 4);//need get content size
 		
 		
 		//printf("content index end is %d, total line length is %d\n", x, i);
@@ -74,10 +74,13 @@ int main(int argc, char *argv[]) {
 		
 	}else printf("Target file is empty\n");
 	
-	fseek(SrcFp, loc, SEEK_SET);
+	/*fseek(SrcFp, loc, SEEK_SET);
 	//fputs(line, SrcFp);
-	fwrite(line, 1, 15, SrcFp);
+	fwrite(line, 1, 15, SrcFp);*/
+	TgtFp = fopen("target.txt", "w");
 	
+	fwrite(line, 1, 15, TgtFp);
+	fclose(TgtFp);
 	fclose(SrcFp);
 	fclose(TgtFp);
 	return 0;

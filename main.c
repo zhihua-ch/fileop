@@ -10,6 +10,7 @@ int main(int argc, char *argv[]) {
 	char TgtWds[100];
 	
 	int i, x;
+	long int loc;
 	/*initial character */
 	for(i=0;i<100;i++) {
 		line[i] = NULL;
@@ -39,22 +40,43 @@ int main(int argc, char *argv[]) {
 		
 		while(line[i] != '=') {
 			i++;
-			printf("i is %d", i);
+		//	printf("i is %d", i);
 		}
 		
-		printf("index is %d", i);
+		printf("index is %d\n", i);
 	}else printf("Source file open to empty.\n");
 	
+	loc = ftell(SrcFp);
+	
 	if(fgets(TgtWds, 10, TgtFp)){
-		x = 0;
+		/*x = 0;
+		do{
+			printf("%c", TgtWds[x]);}
+		while(TgtWds[x++]);
+			
 		i++;
 		
 		while(TgtWds[x]){
 			line[i++] = TgtWds[x++];
-		}
-		printf("content index end is %d", x);
+			printf("i is %d\n", i);
+		}*/
+		i++;
+		strncpy(&line[i], TgtWds, 4);
+		
+		
+		//printf("content index end is %d, total line length is %d\n", x, i);
+		
+		/*show result line*/
+		i = 0;
+		do{
+			printf("%c", line[i]);
+		}while(line[i++]);
+		
 	}else printf("Target file is empty\n");
 	
+	fseek(SrcFp, loc, SEEK_SET);
+	//fputs(line, SrcFp);
+	fwrite(line, 1, 15, SrcFp);
 	
 	fclose(SrcFp);
 	fclose(TgtFp);
